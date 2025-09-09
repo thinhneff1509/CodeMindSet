@@ -1,0 +1,60 @@
+body {
+    font-family: system-ui,
+    Arial, sans-serif;
+    background:#0b0c10;
+    color:#eee;
+    display:flex;
+    justify-content:center
+}
+.wrap {
+    width:600px;
+    margin-top:24px;
+}
+.toolbar {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:12px 0;
+}
+button {
+    padding:8px 12px;
+    border-radius:10px;
+    border:1px solid #444;
+    background:#1f2833;
+    color:#eee;
+    cursor:pointer;
+}
+#board {
+    background:#141b23;
+    border:1px solid #2b3138;
+    border-radius:12px;
+}
+.next span .dot{
+    display:inline-block;
+    width:14px; height:14px;
+    border-radius:50%;
+    margin:0 2px;
+    border:1px solid rgba(255,255,255,.2);
+}
+
+.card { background:#11161d; border:1px solid #2b3138; border-radius:12px; padding:16px; }
+.auth-form { border:1px solid #2b3138; border-radius:10px; padding:12px; margin-bottom:12px; }
+.auth-form h3 { margin:0 0 8px 0; font-weight:600; }
+.auth-form input {
+    display:block; width:100%; max-width:280px;
+    margin:6px 0; padding:8px 10px; border-radius:8px;
+    border:1px solid #2b3138; background:#0f141a; color:#eee;
+}
+.auth-form button { margin-top:6px; }
+#me { font-size:14px; opacity:0.9; }
+
+.card { background:#11161d; border:1px solid #2b3138; border-radius:12px; padding:16px; }
+.auth-form { border:1px solid #2b3138; border-radius:10px; padding:12px; margin-bottom:12px; }
+.auth-form h3 { margin:0 0 8px 0; font-weight:600; }
+.auth-form input {
+    display:block; width:100%; max-width:280px;
+    margin:6px 0; padding:8px 10px; border-radius:8px;
+    border:1px solid #2b3138; background:#0f141a; color:#eee;
+}
+.auth-form button { margin-top:6px; }
+

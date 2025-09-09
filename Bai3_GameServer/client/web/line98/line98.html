@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>Line 98 – Demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+</head>
+<body>
+<div class="wrap">
+    <h1>Line 98</h1>
+
+    <!-- Auth: 2 form -->
+    <div id="authPanel" class="card" style="margin-bottom:12px">
+        <form id="registerForm" class="auth-form">
+            <h3>Register</h3>
+            <input id="reg_username" placeholder="Username" required />
+            <input id="reg_password" type="password" placeholder="Password" required />
+            <input id="reg_nickname" placeholder="Nickname (optional)" />
+            <button type="submit">Register</button>
+        </form>
+
+        <form id="loginForm" class="auth-form">
+            <h3>Login</h3>
+            <input id="login_username" placeholder="Username" required />
+            <input id="login_password" type="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+            <button type="button" id="btnLogout" style="display:none">Logout</button>
+            <span id="me" style="margin-left:8px;"></span>
+        </form>
+        <small>Hãy đăng nhập để bắt đầu chơi.</small>
+    </div>
+
+    <!-- Game Panel -->
+    <div id="gamePanel" style="display:none">
+        <div class="toolbar">
+            <button id="btnNew">New Game</button>
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="next">Next: <span id="next"></span></div>
+        </div>
+        <canvas id="board" width="540" height="540"></canvas>
+    </div>
+</div>
+
+<!-- Socket.IO client -->
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+<!-- Shared -->
+<script type="module" src="../auth.js"></script>
+<script type="module" src="../socket.js"></script>
+
+<!-- Line98 -->
+<script type="module" src="../line98/apiLine98.js"></script>
+<script type="module" src="./line98UI.js"></script>
+<script type="module" src="../line98/mainLine98.js"></script>
+</body>
+</html>

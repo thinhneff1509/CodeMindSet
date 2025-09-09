@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>Game Hub</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <style>
+        body { font-family: system-ui, Arial, sans-serif; background:#0b0c10; color:#eee; }
+        .wrap { width:600px; margin:40px auto; text-align:center; }
+        h1 { margin-bottom:24px; }
+        .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+        .card { background:#1f2833; padding:20px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.4); }
+        .card h3 { margin:0 0 10px; }
+        .card p { font-size:14px; color:#ccc; min-height:40px; }
+        .card a button { padding:10px 16px; border:none; border-radius:8px; cursor:pointer; background:#45a29e; color:#fff; font-weight:bold; }
+        .card a button:hover { background:#66fcf1; color:#000; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <h1>🎮 Chọn trò chơi</h1>
+    <div class="grid">
+        <div class="card">
+            <h3>Line 98</h3>
+            <p>Xếp bóng, ăn điểm, chơi đơn</p>
+            <a href="./line98/line98.html"><button>Play Line 98</button></a>
+        </div>
+        <div class="card">
+            <h3>Cờ Caro</h3>
+            <p>Đánh X O 15x15, thắng khi có 5 liên tiếp.</p>
+            <a href="./caro/caro.html"><button>Play Caro</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
