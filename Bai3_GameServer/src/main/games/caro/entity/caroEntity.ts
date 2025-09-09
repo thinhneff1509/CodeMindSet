@@ -1,5 +1,5 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
-
+// không dùng
 @Entity('caro_games')
 export class CaroGameEntity {
     @PrimaryGeneratedColumn('uuid')

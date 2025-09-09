@@ -13,12 +13,11 @@ interface RoomInfo { id: string; x: Socket; o: Socket; turn: Side; }
 export class CaroGateway {
     @WebSocketServer() io!: Server;
 
-    // Hàng đợi & phòng đang chơi – để ở cấp lớp (dùng chung)
+    // Hàng đợi & phòng đang chơi
     private waiting: Socket | null = null;
     private rooms = new Map<string, RoomInfo>();
 
     handleConnection(sock: Socket) {
-        // chỉ log cho dễ debug
         // console.log('[caro] connect', sock.id);
     }
 
@@ -86,7 +85,6 @@ export class CaroGateway {
         const opp = isX ? room.o : room.x;
         opp.emit('opponentMove', { r: body.r, c: body.c, v: mySide });
 
-        // TODO: có thể thêm kiểm tra thắng cuộc ở đây, rồi:
         // this.io.to(room.id).emit('gameOver', { winner: 'X' | 'O', line: [...] });
     }
 }

@@ -11,7 +11,7 @@ export class GamesGateway {
         client.emit('joined', room);
     }
 
-    // phát state này từ Controller/Service nếu muốn multi-player.
+    // từ Controller nếu sử dụng multi-player nhưng mà chưa dùng đến
     broadcastState(room: string, payload: any){
         this.server.to(room).emit('state', payload);
     }

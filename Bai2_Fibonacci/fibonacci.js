@@ -1,4 +1,4 @@
-// Fibonacci bằng DP bottom-up, O(1) space, dùng BigInt
+// Fibonacci
 function fibDP(n) {
     if (!Number.isInteger(n) || n < 0) {
         throw new Error("n must be a non-negative integer");

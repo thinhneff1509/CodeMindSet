@@ -1,4 +1,4 @@
-// Simple board + win check logic (15x15, 5 in a row)
+// Tạo sàn 15X15 và check điều kiện thắng thua (X và O)
 export type Cell = '' | 'X' | 'O';
 
 export class CaroBoard {

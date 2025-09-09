@@ -123,7 +123,7 @@ $('btnFind').addEventListener('click', () => {
     socket.on('errorMsg', (m) => alert(m));
 });
 
-// chỉ logout ở đây (login/register đã do auth.js lo)
+// logout
 $('btnLogout').addEventListener('click', () => {
     clearToken();
     socket?.disconnect();

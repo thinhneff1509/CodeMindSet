@@ -87,7 +87,7 @@ $('loginForm').addEventListener('submit', async (e) => {
     const u = $('login_username').value.trim();
     const p = $('login_password').value;
     try {
-        await apiLogin(u, p);           // tự lưu token
+        await apiLogin(u, p);           // lưu token
         const me = await apiMe();       // lấy user để hiển thị
         renderAuthUI(me);
         await startGame();
@@ -100,7 +100,7 @@ $('btnLogout').addEventListener('click', () => {
     alert('Đã logout!');
 });
 
-// socket -> cập nhật UI
+// socket
 document.addEventListener('server-state', (e) => {
     const g = e.detail;
     if (g?.id) setGame(g);

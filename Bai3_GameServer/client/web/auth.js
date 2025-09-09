@@ -44,7 +44,7 @@ export async function apiMe() {
         const data = await parseRes(res);
         return data;
     } catch {
-        // Fallback: decode JWT (không xác thực, chỉ để hiển thị)
+        // decode JWT
         try {
             const [, payload] = t.split('.');
             const json = JSON.parse(atob(payload.replace(/-/g,'+').replace(/_/g,'/')));
@@ -63,7 +63,7 @@ export function authHeader(){
     return t ? { Authorization: `Bearer ${t}` } : {};
 }
 
-// --- UI glue ---
+// UI glue
 const $ = (id)=>document.getElementById(id);
 const me = $('me');
 const btnLogout = $('btnLogout');
@@ -81,7 +81,7 @@ export function renderAuthUI(user){
     }
 }
 
-// Wire sự kiện cho 2 form + logout
+// Wire sự kiện cho login + register + logout
 async function initAuthUI() {
     $('registerForm')?.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -116,7 +116,7 @@ async function initAuthUI() {
         alert('Đã logout!');
     });
 
-    // Nếu đã có token (refresh trang), tự lấy me
+    // Nếu đã có token (refresh page)
     const user = await apiMe();
     renderAuthUI(user);
 }

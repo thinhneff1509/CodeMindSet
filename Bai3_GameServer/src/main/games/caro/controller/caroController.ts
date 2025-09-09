@@ -1,6 +1,5 @@
 import { Controller, Get, Param } from '@nestjs/common';
-// Nếu có lưu lịch sử thì có thêm vào
-
+//không dùng tới do không lưu lịch sử trận đấu
 @Controller('games/caro')
 export class CaroController {
     @Get('ping')
