@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { AuthModule } from './main/auth/authModule';
 import { UsersModule } from './main/user/usersModule';
 import { Line98Module } from './main/games/line98/controller/module/line98Module';
+import { CaroModule } from './main/games/caro/controller/module/caroModule';
 
 @Module({
     imports: [
@@ -18,7 +19,7 @@ import { Line98Module } from './main/games/line98/controller/module/line98Module
         UsersModule,
         AuthModule,
         Line98Module,
-
+        CaroModule,
     ],
     controllers: [AppController],
     providers: [AppService],
