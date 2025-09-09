@@ -8,7 +8,7 @@ import { TasksModule } from './taskModule';
         TypeOrmModule.forRoot({
             type: 'sqlite',
             database: 'tasks.db',
-            entities: [Task],          // hoặc entities: [__dirname + '/../**/*.entity{.ts,.js}']
+            entities: [Task],
             synchronize: true,         // only DEV
             logging: false,
         }),
